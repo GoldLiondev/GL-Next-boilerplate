@@ -4,6 +4,7 @@ import type { NextPage } from "next";
 // component
 import { Page } from "components/Page";
 import { WithContainer } from "components/Container";
+
 // views
 import { HeroView } from "views/Home";
 
