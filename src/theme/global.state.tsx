@@ -109,7 +109,7 @@ export const GlobalStyle = createGlobalStyle(({ theme }) =>
       transition: get(theme, "transition.normal"),
       fontFamily: '"Roboto" ,sans-serif !important',
       fontWeight: "400",
-      fontSize: "12px",
+      fontSize: "inherit",
       lineHeight: "1.5",
       textShadow: "1px 1px 1px rgba(0, 0, 0, 0.004)",
     },

@@ -1,8 +1,11 @@
 /* eslint-disable no-undef */
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const nextTranslate = require("next-translate");
+
 /** @type {import('next').NextConfig} */
 
 // next.js configuration
-const nextConfig = {
+module.exports = nextTranslate({
   reactStrictMode: true,
   // Add the domain for the global storage service that you will be using for images
   images: {
@@ -16,6 +19,4 @@ const nextConfig = {
       },
     },
   },
-};
-
-module.exports = nextConfig;
+});

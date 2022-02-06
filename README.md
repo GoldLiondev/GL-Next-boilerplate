@@ -16,8 +16,9 @@
 
 1.  Clone this repo using `git clone https://github.com/GoldLiondev/GL-Next-boilerplate.git <YOUR_PROJECT_NAME>`.
 2.  Move to the appropriate directory: `cd <YOUR_PROJECT_NAME>`.
-3.  Run `npm run build` and you can run `npm start` to see the example app at `http://localhost:3000`.
-4.  Run `npm run dev` to develop your app.
+3.  Run `npm install` to install module for project.
+4.  Run `npm run build` and you can run `npm start` to see the example app at `http://localhost:3000`.
+5.  Run `npm run dev` to develop your app.
 
 ## My Development Code Symbol
 
