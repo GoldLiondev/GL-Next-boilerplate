@@ -62,7 +62,7 @@ export default function index() {
               fColor="blue.light"
               hoverStyle={{ fColor: "white" }}
               onClick={() => {
-                move("https://github.com/GoldLiondev/Next-boilerplate");
+                move("https://github.com/GoldLiondev/GL-Next-boilerplate");
               }}
             >
               {" "}
