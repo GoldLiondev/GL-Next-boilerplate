@@ -1,0 +1,10 @@
+{
+  "build": {
+    "env": {
+      "SPACE": "4yanu4966suf",
+      "ACCESS_TOKEN": "A7CATY5rxmRwaEQU-MpCKMVLXcTuBL0mnWepIlsNvWg",
+      "ENVIRONMENT": "master",
+      "CONTENT_DELIVERY_GRAPHQL_API": "https://graphql.contentful.com/content/v1/spaces/4yanu4966suf/environments/master"
+    }
+  }
+}
