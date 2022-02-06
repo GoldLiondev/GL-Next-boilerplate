@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "esnext",
+    "baseUrl": "src",
     "lib": [
       "dom",
       "dom.iterable",
@@ -30,15 +31,13 @@
     "preserveConstEnums": true,
     "sourceMap": true,
     "isolatedModules": true,
-    "baseUrl": "src",
     "incremental": true
   },
   "include": [
     "next-env.d.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
-    "custom-types.d.ts",
-    "src/pages/legals"
+    "custom-types.d.ts"
   ],
   "exclude": ["node_modules"]
 }
