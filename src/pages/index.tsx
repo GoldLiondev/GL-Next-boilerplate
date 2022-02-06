@@ -6,15 +6,10 @@ import { Page } from "components/Page";
 import { WithContainer } from "components/Container";
 
 // views
-import { HeroView } from "views/Home";
 
 // ------------------------------------------------------
 const Home: NextPage = () => {
-  return (
-    <Page name="home">
-      <WithContainer mWidth={1440} SectionView={HeroView} cColor="black.200" />
-    </Page>
-  );
+  return <Page name="home"></Page>;
 };
 
 export default Home;
