@@ -24,7 +24,7 @@ export default function index() {
             fSize={65}
             fWeight={700}
             padding="0 0 10px 0"
-            fColor="black.100"
+            fColor="black.normal"
             tTransForm="uppercase"
             mode="h1"
           >

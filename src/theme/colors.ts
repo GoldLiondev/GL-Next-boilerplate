@@ -6,32 +6,19 @@ const baseColor = {
   },
   black: {
     regular: "#000000",
-    100: "#140A01",
-    200: "#282c34",
+    normal: "#140A01",
+    100: "#282c34",
   },
   gray: {
     regular: "#A28888",
     normal: "#ABB1BB",
     100: "#A3A6AC",
     150: "#e3e3e3",
-    200: "#868585",
-    250: "#7a7a7a",
-    300: "#666",
-    350: "#dadada",
-    400: "#f6f6f6",
-    450: "#666666",
-    500: "#777",
-    600: "#EFEFEF",
-    700: "#F7F7F7",
-    800: "#B3B3B3",
-    900: "#D6D6D6",
   },
-  brown: {
-    100: "#A7956E",
-  },
+  brown: {},
   transparent: "transparent",
   primary: {
-    regular: "#E31E31",
+    regular: "#61dafb",
     hover: "#B81D2B",
     alternate: "#FA4C4C",
     light: "#FC7171",
@@ -52,7 +39,6 @@ const baseColor = {
     regular: "#27AE60",
     normal: "#4ECDC4",
     dark: "#166A1F",
-    100: "#449d44",
   },
   pink: {
     highlight: "#FC7171",
@@ -75,7 +61,6 @@ const baseColor = {
   red: {
     regular: "#E31E31",
     dark: "#d70023",
-    100: "#bb0628",
   },
   purple: {
     100: "#621F9F",
@@ -89,7 +74,6 @@ const baseColor = {
   muted: "",
   highlight: "",
   background: "#F2F2F2",
-  sidebar: { bg: "#1d1e20" },
 };
 
 export default baseColor;

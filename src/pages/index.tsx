@@ -12,7 +12,7 @@ import { HeroView } from "views/home";
 const Home: NextPage = () => {
   return (
     <Page name="home">
-      <WithContainer mWidth={1440} SectionView={HeroView} cColor="black.200" />
+      <WithContainer mWidth={1440} SectionView={HeroView} cColor="black.100" />
     </Page>
   );
 };

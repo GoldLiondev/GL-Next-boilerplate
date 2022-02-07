@@ -1,6 +1,5 @@
 import React from "react";
 // modules
-import useTranslation from "next-translate/useTranslation";
 import setLanguage from "next-translate/setLanguage";
 import Trans from "next-translate/Trans";
 
@@ -17,7 +16,6 @@ import NotFoundImage from "assets/images/layout/boilerplate_logo.png";
 // ----------------------------------------------------------
 
 export default function index() {
-  const { t } = useTranslation("home");
   const { move } = useRouter();
   return (
     <HeroWrapper>

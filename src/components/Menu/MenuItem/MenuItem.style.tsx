@@ -15,7 +15,7 @@ export const MenuItemWrapper = styled.div<StyledProps>`
   }
   :hover {
     .menuTitle {
-      color: ${themeGet("colors.black.200")};
+      color: ${themeGet("colors.black.100")};
     }
     .itemContainer {
       display: block;

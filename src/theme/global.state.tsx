@@ -57,7 +57,7 @@ export const GlobalStyle = createGlobalStyle(({ theme }) =>
       borderRadius: "6px",
     },
     h1: {
-      color: get(theme, "colors.black.100"),
+      color: get(theme, "colors.black.normal"),
       fontFamily: "base",
       fontSize: "5xl",
       fontWeight: "bolder",
@@ -65,7 +65,7 @@ export const GlobalStyle = createGlobalStyle(({ theme }) =>
       margin: 0,
     },
     h2: {
-      color: get(theme, "colors.black.100"),
+      color: get(theme, "colors.black.normal"),
       fontFamily: "base",
       fontSize: "4xl",
       fontWeight: "bold",
@@ -73,7 +73,7 @@ export const GlobalStyle = createGlobalStyle(({ theme }) =>
       margin: 0,
     },
     h3: {
-      color: get(theme, "colors.black.100"),
+      color: get(theme, "colors.black.normal"),
       fontFamily: "base",
       fontSize: "xl",
       fontWeight: "bold",
@@ -81,7 +81,7 @@ export const GlobalStyle = createGlobalStyle(({ theme }) =>
       margin: 0,
     },
     h4: {
-      color: get(theme, "colors.black.100"),
+      color: get(theme, "colors.black.normal"),
       fontFamily: "base",
       fontSize: "xl",
       fontWeight: "regular",
@@ -89,7 +89,7 @@ export const GlobalStyle = createGlobalStyle(({ theme }) =>
       margin: 0,
     },
     h5: {
-      color: get(theme, "colors.black.100"),
+      color: get(theme, "colors.black.normal"),
       fontFamily: "base",
       fontSize: "mm",
       fontWeight: "regular",

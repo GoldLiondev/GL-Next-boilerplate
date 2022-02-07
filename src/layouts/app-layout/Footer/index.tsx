@@ -2,12 +2,17 @@ import React from "react";
 // component
 import { WithContainer } from "components/Container";
 // styled component
-import { FooterWrapper } from "./Footer.style";
+import { CopyrightView } from "views/layout";
 
 // -----------------------------------------------------
 
 const FooterView = () => {
-  return <></>;
+  return (
+    <WithContainer
+      SectionView={CopyrightView}
+      cColor="black.100"
+    ></WithContainer>
+  );
 };
 
 const Footer = React.memo(FooterView);
