@@ -45,6 +45,7 @@ export const GlobalStyle = createGlobalStyle(({ theme }) =>
         "-ms-user-select": "none",
         "user-select": "none",
       },
+      margin: 0,
     },
     "::-webkit-scrollbar": {
       width: "3px",
