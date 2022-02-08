@@ -29,6 +29,7 @@ export interface LayoutRowProps extends FlexLayoutProps {
   templateCol?: string;
   templateRow?: string;
   rWidth?: number | string;
+  rHeight?: number | string;
 }
 
 export interface ResponsivedLayoutRowProps extends LayoutRowProps {

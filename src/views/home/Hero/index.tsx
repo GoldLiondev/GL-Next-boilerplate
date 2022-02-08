@@ -1,6 +1,5 @@
 import React from "react";
 // modules
-import setLanguage from "next-translate/setLanguage";
 import Trans from "next-translate/Trans";
 
 // component
@@ -8,15 +7,19 @@ import { Row, Col } from "components/Layout";
 import { Text } from "components/Text";
 import { Image } from "components/Image";
 // hooks
+import useDarkMode from "use-dark-mode";
 import { useRouter } from "hooks";
 // styled components
 import { HeroWrapper } from "./Hero.style";
 // assets
-import NotFoundImage from "assets/images/layout/boilerplate_logo.png";
+import LogoImage from "assets/images/layout/boilerplate_logo.png";
+import LogoDarkImage from "assets/images/layout/boilerplate_logo_dark.png";
 // ----------------------------------------------------------
 
 export default function index() {
   const { move } = useRouter();
+  const darkMode = useDarkMode();
+
   return (
     <HeroWrapper>
       <Row
@@ -27,12 +30,9 @@ export default function index() {
       >
         <Col padding="0 0 20px 0">
           <Image
-            src={NotFoundImage}
+            src={darkMode.value ? LogoImage : LogoDarkImage}
             width={859}
             height={228}
-            onClick={() => {
-              setLanguage("cn");
-            }}
           />
         </Col>
         <Col>

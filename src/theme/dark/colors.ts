@@ -1,13 +1,13 @@
 const baseColor = {
-  white: "#ffffff",
+  white: "#000000",
   whites: {
     100: "#F8F9FA",
     200: "#f1f1f1",
   },
   black: {
-    regular: "#000000",
-    normal: "#140A01",
-    100: "#282c34",
+    regular: "#ffffff",
+    normal: "#F8F9FA",
+    100: "#F8F9FA",
   },
   gray: {
     regular: "#A28888",
@@ -18,7 +18,7 @@ const baseColor = {
   brown: {},
   transparent: "transparent",
   primary: {
-    regular: "#61dafb",
+    regular: "#FDA92D",
     hover: "#B81D2B",
     alternate: "#FA4C4C",
     light: "#FC7171",

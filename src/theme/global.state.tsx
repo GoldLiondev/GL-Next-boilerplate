@@ -37,6 +37,7 @@ export const GlobalStyle = createGlobalStyle(({ theme }) =>
       WebkitTextSizeAdjust: "100%",
       WebkitFontSmoothing: "antialiased",
       MozOsxFontSmoothing: "grayscale",
+      userSelect: "none",
       button: {
         "-moz-user-select": "none",
         "-khtml-user-select": "none",

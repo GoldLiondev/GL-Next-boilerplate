@@ -3,9 +3,10 @@ import NProgress from "nprogress";
 // next
 import type { AppProps } from "next/app";
 import { Router } from "next/router";
+// hooks
+import useDarkMode from "use-dark-mode";
 // component
 import { LoadingScreen } from "components/Loading";
-// layout
 import AppLayout from "layouts/app-layout";
 // apollo setting
 import { useApollo } from "api/configureClient";
@@ -17,11 +18,13 @@ import { persistor, store } from "redux/store";
 import { ApolloProvider } from "@apollo/react-hooks";
 import { ThemeProvider } from "styled-components";
 // Import Swiper styles
-import { defaultTheme } from "theme";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+// style
 import { GlobalStyle } from "theme/global.state";
+// themes
+import { defaultTheme, darkTheme } from "theme";
 // ----------------------------------------------------------------------
 
 NProgress.configure({ showSpinner: false });
@@ -30,8 +33,11 @@ Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
 
-function WareHouseApp({ Component, pageProps }: AppProps) {
+function APP({ Component, pageProps }: AppProps) {
   const apolloClient = useApollo(pageProps.initialApolloState);
+
+  const darkMode = useDarkMode(true);
+  const themeMode = darkMode.value ? defaultTheme : darkTheme;
 
   useEffect(() => {
     // Remove the server-side injected CSS.
@@ -40,12 +46,11 @@ function WareHouseApp({ Component, pageProps }: AppProps) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
   }, []);
-
   return (
     <ReduxProvider store={store}>
       <PersistGate loading={<LoadingScreen />} persistor={persistor}>
         <ApolloProvider client={apolloClient}>
-          <ThemeProvider theme={defaultTheme}>
+          <ThemeProvider theme={themeMode}>
             <AppLayout>
               <Component {...pageProps} />
             </AppLayout>
@@ -56,4 +61,4 @@ function WareHouseApp({ Component, pageProps }: AppProps) {
     </ReduxProvider>
   );
 }
-export default WareHouseApp;
+export default APP;

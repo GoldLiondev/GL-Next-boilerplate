@@ -20,6 +20,12 @@ const RowWrapper = styled.div<ResponsivedLayoutRowProps>`
   padding: ${({ padding }) => padding || "0"};
   width: ${({ rWidth }) =>
     rWidth ? (typeof rWidth === "number" ? rWidth + "px" : rWidth) : "100%"};
+  height: ${({ rHeight }) =>
+    rHeight
+      ? typeof rHeight === "number"
+        ? rHeight + "px"
+        : rHeight
+      : "100%"};
   grid-template-columns: ${({ templateCol }) => templateCol || "0"};
   grid-template-rows: ${({ templateRow }) => templateRow || "0"};
   max-width: ${({ mWidth }) => (mWidth ? `${mWidth}px` : "none")};
@@ -73,7 +79,15 @@ const getResponsive = (responsive, flexDirection, display, gap) => {
             };`
           : ""
       }
-      
+      ${
+        item.rHeight
+          ? `width: ${
+              typeof item.rHeight === "number"
+                ? item.rHeight + "px"
+                : item.rHeight
+            };`
+          : ""
+      }
       ${
         item.gap
           ? `
@@ -157,6 +171,7 @@ const Row = ({
   className,
   mWidth,
   rWidth,
+  rHeight,
 }: ResponsivedLayoutRowProps) => {
   return (
     <RowWrapper
@@ -174,6 +189,7 @@ const Row = ({
       mWidth={mWidth}
       className={className}
       rWidth={rWidth}
+      rHeight={rHeight}
     >
       {children}
     </RowWrapper>
