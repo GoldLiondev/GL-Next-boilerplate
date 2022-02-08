@@ -5,6 +5,7 @@ import setLanguage from "next-translate/setLanguage";
 import { BsSunFill, BsMoonStarsFill } from "react-icons/bs";
 // component
 import { Row, Col } from "components/Layout";
+import { Hidden } from "components/Hidden";
 import { Text } from "components/Text";
 // hooks
 import useDarkMode from "use-dark-mode";
@@ -24,7 +25,12 @@ const Header = () => {
 
   return (
     <HeaderWrapper>
-      <Row justifyContent="flex-end" gap={20} padding="15px 20px">
+      <Row
+        justifyContent="flex-end"
+        gap={20}
+        padding="15px 20px"
+        responsive={{ 380: { gap: -1 } }}
+      >
         <Col>
           {mode ? (
             <IconWrapper onClick={handleChangeMode}>
@@ -37,44 +43,46 @@ const Header = () => {
           )}
         </Col>
         <Col>
-          <Row alignItems="center" gap={20}>
-            <Text
-              fColor="white"
-              cursor="pointer"
-              onClick={() => {
-                setLanguage("en");
-              }}
-            >
-              English
-            </Text>
-            <Text
-              fColor="white"
-              cursor="pointer"
-              onClick={() => {
-                setLanguage("jp");
-              }}
-            >
-              Japanese
-            </Text>
-            <Text
-              fColor="white"
-              cursor="pointer"
-              onClick={() => {
-                setLanguage("es");
-              }}
-            >
-              Spanish
-            </Text>
-            <Text
-              fColor="white"
-              cursor="pointer"
-              onClick={() => {
-                setLanguage("cn");
-              }}
-            >
-              Chinese
-            </Text>
-          </Row>
+          <Hidden wHide={[380]}>
+            <Row alignItems="center" gap={20}>
+              <Text
+                fColor="white"
+                cursor="pointer"
+                onClick={() => {
+                  setLanguage("en");
+                }}
+              >
+                English
+              </Text>
+              <Text
+                fColor="white"
+                cursor="pointer"
+                onClick={() => {
+                  setLanguage("jp");
+                }}
+              >
+                Japanese
+              </Text>
+              <Text
+                fColor="white"
+                cursor="pointer"
+                onClick={() => {
+                  setLanguage("es");
+                }}
+              >
+                Spanish
+              </Text>
+              <Text
+                fColor="white"
+                cursor="pointer"
+                onClick={() => {
+                  setLanguage("cn");
+                }}
+              >
+                Chinese
+              </Text>
+            </Row>
+          </Hidden>
         </Col>
       </Row>
     </HeaderWrapper>

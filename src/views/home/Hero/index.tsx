@@ -1,7 +1,6 @@
 import React from "react";
 // modules
 import Trans from "next-translate/Trans";
-
 // component
 import { Row, Col } from "components/Layout";
 import { Text } from "components/Text";
@@ -27,6 +26,7 @@ export default function index() {
         justifyContent="center"
         alignItems="center"
         className="heroLayout"
+        padding="80px 0"
       >
         <Col padding="0 0 20px 0">
           <Image
