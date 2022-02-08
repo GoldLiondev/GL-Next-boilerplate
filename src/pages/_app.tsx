@@ -37,7 +37,7 @@ function APP({ Component, pageProps }: AppProps) {
   const apolloClient = useApollo(pageProps.initialApolloState);
 
   const darkMode = useDarkMode(true);
-  const themeMode = darkMode.value ? defaultTheme : darkTheme;
+  const themeMode = darkMode.value ? darkTheme : defaultTheme;
 
   useEffect(() => {
     // Remove the server-side injected CSS.

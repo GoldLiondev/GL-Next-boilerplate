@@ -30,7 +30,7 @@ export default function index() {
       >
         <Col padding="0 0 20px 0">
           <Image
-            src={darkMode.value ? LogoImage : LogoDarkImage}
+            src={darkMode.value ? LogoDarkImage : LogoImage}
             width={859}
             height={228}
           />
@@ -53,7 +53,7 @@ export default function index() {
                 <Text
                   key="title"
                   mode="span"
-                  fColor="blue.light"
+                  fColor="primary.regular"
                   fWeight={800}
                   fSize={62}
                   responsive={{
@@ -76,7 +76,8 @@ export default function index() {
                   mode="span"
                   tDecorations="underline"
                   cursor="pointer"
-                  fColor="blue.light"
+                  fWeight={500}
+                  fColor="primary.regular"
                   hoverStyle={{ fColor: "white" }}
                   onClick={() => {
                     move("https://github.com/GoldLiondev/GL-Next-boilerplate");

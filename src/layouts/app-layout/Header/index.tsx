@@ -15,14 +15,10 @@ import { HeaderWrapper, IconWrapper } from "./Header.style";
 // --------------------------------------------------------------
 
 const Header = () => {
-  const [mode, setMode] = useState(false);
   const darkMode = useDarkMode();
-
   const handleChangeMode = () => {
-    setMode(!mode);
     darkMode.toggle();
   };
-
   return (
     <HeaderWrapper>
       <Row
@@ -32,13 +28,13 @@ const Header = () => {
         responsive={{ 380: { gap: -1 } }}
       >
         <Col>
-          {mode ? (
+          {darkMode.value ? (
             <IconWrapper onClick={handleChangeMode}>
-              <BsSunFill color="#fceb00" size={30} />
+              <BsMoonStarsFill color="#fceb00" size={30} />
             </IconWrapper>
           ) : (
             <IconWrapper onClick={handleChangeMode}>
-              <BsMoonStarsFill color="#fceb00" size={30} />
+              <BsSunFill color="#fceb00" size={30} />
             </IconWrapper>
           )}
         </Col>
