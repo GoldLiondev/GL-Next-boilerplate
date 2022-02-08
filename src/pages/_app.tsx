@@ -48,16 +48,16 @@ function APP({ Component, pageProps }: AppProps) {
   }, []);
   return (
     <ReduxProvider store={store}>
-      <PersistGate loading={<LoadingScreen />} persistor={persistor}>
-        <ApolloProvider client={apolloClient}>
-          <ThemeProvider theme={themeMode}>
+      <ThemeProvider theme={themeMode}>
+        <PersistGate loading={<LoadingScreen />} persistor={persistor}>
+          <ApolloProvider client={apolloClient}>
             <AppLayout>
               <Component {...pageProps} />
             </AppLayout>
-            <GlobalStyle />
-          </ThemeProvider>
-        </ApolloProvider>
-      </PersistGate>
+          </ApolloProvider>
+        </PersistGate>
+        <GlobalStyle />
+      </ThemeProvider>
     </ReduxProvider>
   );
 }
