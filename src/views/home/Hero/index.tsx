@@ -11,8 +11,8 @@ import { useRouter } from "hooks";
 // styled components
 import { HeroWrapper } from "./Hero.style";
 // assets
-import LogoImage from "assets/images/layout/boilerplate_logo.png";
 import LogoDarkImage from "assets/images/layout/boilerplate_logo_dark.png";
+import LogoLightImage from "assets/images/layout/boilerplate_logo_light.png";
 // ----------------------------------------------------------
 
 export default function index() {
@@ -30,7 +30,7 @@ export default function index() {
       >
         <Col padding="0 0 20px 0">
           <Image
-            src={darkMode.value ? LogoDarkImage : LogoImage}
+            src={darkMode.value ? LogoLightImage : LogoDarkImage}
             width={859}
             height={228}
           />
