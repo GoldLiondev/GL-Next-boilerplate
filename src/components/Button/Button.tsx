@@ -126,7 +126,7 @@ const Button = React.forwardRef<Ref, ButtonItemProps>(
         ref={ref}
         {...props}
         disabled={disabled}
-        aria-label="warehouse"
+        aria-label="gl-next"
       >
         <ButtonInner>
           <div>{children}</div>
